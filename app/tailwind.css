@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: #fbfbf4;
+  background-image: repeating-linear-gradient(
+      25deg,
+      transparent 0,
+      transparent 65%,
+      #f9f5f5 65%,
+      #f9f5f5 70%,
+      transparent 70%,
+      transparent 100%
+    ),
+    repeating-linear-gradient(
+      -25deg,
+      transparent 0,
+      transparent 65%,
+      #f9f5f5 65%,
+      #f9f5f5 70%,
+      transparent 70%,
+      transparent 100%
+    ),
+    repeating-linear-gradient(
+      -25deg,
+      transparent 0,
+      transparent 30%,
+      #f9f5f5 30%,
+      #f9f5f5 35%,
+      transparent 35%,
+      transparent 100%
+    ),
+    repeating-linear-gradient(
+      25deg,
+      transparent 0,
+      transparent 30%,
+      #f9f5f5 30%,
+      #f9f5f5 35%,
+      transparent 35%,
+      transparent 100%
+    ),
+    repeating-linear-gradient(
+      65deg,
+      transparent 0,
+      transparent 65%,
+      #f9f5f5 65%,
+      #f9f5f5 70%,
+      transparent 70%,
+      transparent 100%
+    ),
+    repeating-linear-gradient(
+      -65deg,
+      transparent 0,
+      transparent 65%,
+      #f9f5f5 65%,
+      #f9f5f5 70%,
+      transparent 70%,
+      transparent 100%
+    ),
+    repeating-linear-gradient(
+      -65deg,
+      transparent 0,
+      transparent 30%,
+      #f9f5f5 30%,
+      #f9f5f5 35%,
+      transparent 35%,
+      transparent 100%
+    ),
+    repeating-linear-gradient(
+      65deg,
+      transparent 0,
+      transparent 30%,
+      #f9f5f5 30%,
+      #f9f5f5 35%,
+      transparent 35%,
+      transparent 100%
+    );
+  background-size: 3em 1em, 3em 1em, 3em 1em, 3em 1em, 1em 3em, 1em 3em, 1em 3em,
+    1em 3em;
+}

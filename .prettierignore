@@ -6,3 +6,7 @@ node_modules
 
 /app/styles/tailwind.css
 /studio/dist
+
+# Ignore artifacts:
+build
+coverage

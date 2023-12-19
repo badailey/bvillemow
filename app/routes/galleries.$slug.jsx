@@ -20,7 +20,7 @@ export async function loader({ params }) {
 export const meta = ({ data }) => {
   if (!data?.photoGallery) {
     return [
-      { title: "Gallery not found | Syracuse Poster Project" },
+      { title: "Gallery not found | Baldwinsville Meals on Wheels" },
       {
         name: "description",
         content: "We could not find the photo gallery you're looking for",
@@ -30,7 +30,9 @@ export const meta = ({ data }) => {
   const { photoGallery } = data;
 
   return [
-    { title: `Photo Gallery: ${photoGallery.title} | Syracuse Poster Project` },
+    {
+      title: `Photo Gallery: ${photoGallery.title} | Baldwinsville Meals on Wheels`,
+    },
     { name: "description", content: "Photo Galleries of past events" },
   ];
 };

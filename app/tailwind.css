@@ -76,6 +76,13 @@ html {
       transparent 35%,
       transparent 100%
     );
-  background-size: 3em 1em, 3em 1em, 3em 1em, 3em 1em, 1em 3em, 1em 3em, 1em 3em,
+  background-size:
+    3em 1em,
+    3em 1em,
+    3em 1em,
+    3em 1em,
+    1em 3em,
+    1em 3em,
+    1em 3em,
     1em 3em;
 }

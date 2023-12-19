@@ -23,7 +23,7 @@ export function Faq({ title, questions_answers }) {
                       <ChevronDownIcon
                         className={classNames(
                           open ? "-rotate-180" : "rotate-0",
-                          "h-6 w-6 transform"
+                          "h-6 w-6 transform",
                         )}
                         aria-hidden="true"
                       />

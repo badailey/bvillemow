@@ -17,7 +17,6 @@ export default defineType({
     },
   ],
   fields: [
-    
     // Add mainNav array of page references to siteConfig.js
     defineField({
       title: 'Main Navigation',

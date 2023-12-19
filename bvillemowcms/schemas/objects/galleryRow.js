@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'galleryRow',
@@ -6,10 +6,10 @@ export default defineType({
   type: 'object',
   fields: [
     defineField({
-      name: 'images', 
-      type: 'array', 
+      name: 'images',
+      type: 'array',
       title: 'Images',
-      of: [ {type: 'galleryImage'} ],
+      of: [{type: 'galleryImage'}],
       options: {
         layout: 'grid',
       },
@@ -17,18 +17,20 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: 'title', 
+      title: 'title',
       images: 'images',
       image: '.images.0.image',
     },
     prepare(selection) {
-      const { images, image } = selection;
-      const pluralize = (word) => { `${word}${Object.keys(images).length > 1 ? 's' : ''}` }
+      const {images, image} = selection
+      const pluralize = (word) => {
+        ;`${word}${Object.keys(images).length > 1 ? 's' : ''}`
+      }
 
       return {
         title: `Row of ${Object.keys(images).length} ${pluralize('image')}`,
         media: image,
-      };
+      }
     },
   },
 })

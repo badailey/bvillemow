@@ -58,11 +58,7 @@ export function TwoColumnContent({
     const { rightClasses } = colClasses();
 
     return (
-      <div
-        className={clsx(rightClasses, "mt-8 lg:block")}
-      >
-        {children}
-      </div>
+      <div className={clsx(rightClasses, "mt-8 lg:block")}>{children}</div>
     );
   };
 
@@ -70,12 +66,7 @@ export function TwoColumnContent({
     const { leftClasses } = colClasses();
 
     return (
-      <div
-        className={clsx(
-          leftClasses,
-          "mt-8 lg:row-start-1 lg:block",
-        )}
-      >
+      <div className={clsx(leftClasses, "mt-8 lg:row-start-1 lg:block")}>
         {children}
       </div>
     );
@@ -88,14 +79,22 @@ export function TwoColumnContent({
       <div className="mx-auto grid max-w-2xl gap-x-8 gap-y-10 text-base leading-7 text-gray-300 lg:mx-0 lg:max-w-none lg:grid-cols-6">
         <LeftColumn>
           {columns[0]._type === "content" ? (
-            <Content title={columns[0].title} content={columns[0].content} TitleComponent={ColumnTitle} />
+            <Content
+              title={columns[0].title}
+              content={columns[0].content}
+              TitleComponent={ColumnTitle}
+            />
           ) : (
             <Image title={columns[0].title} image={columns[0].image} />
           )}
         </LeftColumn>
         <RightColumn>
           {columns[1]._type === "content" ? (
-            <Content title={columns[1].title} content={columns[1].content} TitleComponent={ColumnTitle} />
+            <Content
+              title={columns[1].title}
+              content={columns[1].content}
+              TitleComponent={ColumnTitle}
+            />
           ) : (
             <Image title={columns[1].title} image={columns[1].image} />
           )}

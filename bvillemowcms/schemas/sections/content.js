@@ -30,7 +30,7 @@ export default {
       options: {
         list: [
           {title: 'Default Component', value: 'Content'},
-          {title: 'No Padding Content', value: 'FullWidthContent'}
+          {title: 'No Padding Content', value: 'FullWidthContent'},
         ],
       },
     },

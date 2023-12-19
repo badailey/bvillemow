@@ -25,16 +25,14 @@ export const meta = () => [
 ];
 
 export async function loader({ request }) {
-  
   const { mainNavigation, footerNavigation } = await getNavigation();
   //TODO what should we do if there is no nav data or an error from sanity?
 
-  return { mainNavigation, footerNavigation, };
+  return { mainNavigation, footerNavigation };
 }
 
 function App() {
-  const { mainNavigation, footerNavigation } =
-    useLoaderData();
+  const { mainNavigation, footerNavigation } = useLoaderData();
 
   return (
     <html lang="en" className="h-full">

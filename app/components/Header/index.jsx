@@ -87,13 +87,6 @@ export default function Header({ cartCount, mainNavigation }) {
         </Popover.Group>
         <div className="flex flex-1 justify-end">
           <div className="flex items-center gap-x-1">
-            {/* <a
-              href="/posters?search=true"
-              type="button"
-              className="relative inline-block border border-transparent fill-white py-2  hover:fill-brand"
-            >
-              <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
-            </a> */}
             <a
               href="/donate"
               className="rounded-md bg-brand px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-brand-dark hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-dark"
@@ -130,13 +123,6 @@ export default function Header({ cartCount, mainNavigation }) {
             </a>
             <div className="flex flex-1 justify-end">
               <div className=" flex flex-1 items-center justify-end text-white gap-x-1">
-                {/* <a
-                  href="/posters?search=true"
-                  type="button"
-                  className="relative inline-block border border-transparent fill-white py-2 hover:bg-brand hover:fill-brand"
-                >
-                  <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
-                </a> */}
                 <a
                   href="/donate"
                   className=" h-9 rounded-md bg-brand px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-brand-dark hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-dark"

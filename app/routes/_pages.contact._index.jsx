@@ -47,8 +47,8 @@ export async function action({ request }) {
     const { firstName, lastName, email, phone, address, message } = formPayload;
 
     const data = await resend.emails.send({
-      from: "Poster Project Website <no-reply@posterproject.org>",
-      to: ["jim@posterproject.org", "vormwald@hey.com"],
+      from: "Baldwinsville Meals on Wheels Website <no-reply@bvillemow.com>",
+      to: ["baldwinsvillemealsonwheels@yahoo.com", "badailey89@gmail.com"],
       subject: "Contact form submission",
       html: `
       <p>Name: ${firstName} ${lastName}</p>
@@ -74,7 +74,7 @@ export async function loader({ params }) {
 export const meta = ({ data }) => {
   if (!data?.pageContent) {
     return [
-      { title: "Page not found | Syracuse Poster Project" },
+      { title: "Page not found | Baldwinsville Meals on Wheels" },
       {
         name: "description",
         content: "We could not find the page you're looking for",
@@ -85,7 +85,9 @@ export const meta = ({ data }) => {
 
   return [
     {
-      title: `${pageContent.title || "Contact Us"} | Syracuse Poster Project`,
+      title: `${
+        pageContent.title || "Contact Us"
+      } | Baldwinsville Meals on Wheels`,
     },
     { name: "description", content: String(pageContent.metaDescription) },
   ];
@@ -128,22 +130,21 @@ export default function Index() {
             <ul className="list-disc">
               <li> How did you discover us?</li>
               <li> What do you like about our work?</li>
-              <li> What do you like about a particular poster?</li>
-              <li> What other products would interest you?</li>
+              <li> What other services would interest you?</li>
             </ul>
             <h4>For more information contact:</h4>
             <div className="flex gap-x-2">
               <dt className="flex-none">
-                <span className="sr-only">Project Coordinator</span>
+                <span className="sr-only">Director</span>
                 <AtSymbolIcon
                   className="h-7 w-6 text-gray-400"
                   aria-hidden="true"
                 />
               </dt>
               <dd>
-                <strong>Jim Emmons</strong>
+                <strong>Donna Metz</strong>
                 <br />
-                jim@posterproject.org
+                baldwinsvillemealsonwheels@yahoo.com
               </dd>
             </div>
             <div className="flex gap-x-2 ">
@@ -155,33 +156,20 @@ export default function Index() {
                 />
               </dt>
               <dd>
-                <strong>Postal Address:</strong>
+                <strong>Our Address:</strong>
                 <br />
-                Syracuse Poster Project
+                Baldwinsville Meals on Wheels
                 <br />
-                207 Paul Ave.
+                76 Canton St.
                 <br />
-                Syracuse, NY 13206
+                Baldwinsville, NY 13027
               </dd>
             </div>
-            <div className="flex gap-x-2">
-              <dt className="flex-none">
-                <span className="sr-only">Work Address</span>
-                <BuildingOffice2Icon
-                  className="h-7 w-6 text-gray-400"
-                  aria-hidden="true"
-                />
-              </dt>
+            <div>
               <dd>
-                <strong>Work Space:</strong>
+                <strong>Our Phone:</strong>
                 <br />
-                Syracuse CoWorks
-                <br />
-                201 E. Jefferson St.
-                <br />
-                Syracuse
-                <br />
-                (315) 937-7123
+                (315) 638-2171
               </dd>
             </div>
           </div>

@@ -2,7 +2,7 @@ import ProseableText from "~/components/sanity/ProseableText";
 import { Layout, FullWidthLayout } from "../layout";
 import { SectionTitle } from "~/components/SectionTitle";
 
-export function Content({ title, content, TitleComponent=SectionTitle }) {
+export function Content({ title, content, TitleComponent = SectionTitle }) {
   return (
     <Layout>
       {title && <TitleComponent title={title} />}

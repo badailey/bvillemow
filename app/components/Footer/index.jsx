@@ -14,8 +14,8 @@ export default function Footer({ footerNavigation }) {
               {" "}
               <img
                 className=" w-36 object-contain md:w-52"
-                src="/images/poster-project-logo.png"
-                alt="Syracuse Poster Project logo"
+                src="/images/BMOW-logo.png"
+                alt="Baldwinsville Meals on Wheels logo"
               />
             </div>
             <div className="flex pt-5 space-x-6 align-baseline md:order-2">
@@ -103,17 +103,13 @@ export default function Footer({ footerNavigation }) {
             aria-label="Footer"
           >
             <div>
-              <p className="text-sm leading-6 text-gray-400">
-                {company.name}
-              </p>
+              <p className="text-sm leading-6 text-gray-400">{company.name}</p>
             </div>
             <div>
               <p className="text-sm leading-6 text-gray-400">|</p>
             </div>
             <div>
-              <p className="text-sm leading-6 text-gray-400">
-                {company.email}
-              </p>
+              <p className="text-sm leading-6 text-gray-400">{company.email}</p>
             </div>
             <div>
               <p className="text-sm leading-6 text-gray-400">|</p>

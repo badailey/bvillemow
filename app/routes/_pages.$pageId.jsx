@@ -17,7 +17,7 @@ export async function loader({ params }) {
 export const meta = ({ data }) => {
   if (!data?.pageContent) {
     return [
-      { title: "Page not found | Syracuse Poster Project" },
+      { title: "Page not found | Baldwinsville Meals on Wheels" },
       {
         name: "description",
         content: "We could not find the page you're looking for",
@@ -27,7 +27,7 @@ export const meta = ({ data }) => {
   const { pageContent } = data;
 
   return [
-    { title: `${pageContent.internalTitle} | Syracuse Poster Project` },
+    { title: `${pageContent.internalTitle} | Baldwinsville Meals on Wheels` },
     { name: "description", content: String(pageContent.metaDescription) },
   ];
 };

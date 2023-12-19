@@ -23,4 +23,3 @@ const redirectRules = {
   "/aboutus": "/about-us",
   "/aboutus/privacy.php": "/privacy",
 };
-

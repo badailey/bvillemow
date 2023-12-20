@@ -10,7 +10,7 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Highlight from "~/components/Highlight";
 
-export default function Header({ cartCount, mainNavigation }) {
+export default function Header({ mainNavigation }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (

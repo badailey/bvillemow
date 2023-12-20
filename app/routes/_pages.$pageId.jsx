@@ -39,7 +39,7 @@ export default function Index() {
     <div key={pageContent._id}>
       <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 ">
         {pageContent.title && (
-          <h1 className="mb-8 mt-2 block text-center text-3xl font-extrabold leading-8 tracking-tight text-green-800 sm:text-4xl">
+          <h1 className="mb-8 mt-2 block text-center text-3xl font-extrabold leading-8 tracking-tight text-brand-dark sm:text-4xl">
             {pageContent.title}
           </h1>
         )}

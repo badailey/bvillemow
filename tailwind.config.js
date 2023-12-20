@@ -1,7 +1,6 @@
-import type { Config } from "tailwindcss";
-
+/** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./app/**/*.{js,jsx,ts,tsx}"],
+  content: ["./app/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       lineClamp: {
@@ -21,7 +20,8 @@ export default {
       },
       colors: {
         brand: "#EF9B9B",
-        "brand-dark": "#BD6969",
+        "brand-dark": "#E86D6D",
+        "brand-light": "#F6C5C5",
       },
     },
   },
@@ -33,4 +33,5 @@ export default {
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
   ],
-} satisfies Config;
+}
+

@@ -78,3 +78,5 @@ export function ErrorBoundary() {
     </html>
   );
 }
+
+export default (App);

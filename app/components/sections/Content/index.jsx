@@ -7,7 +7,7 @@ export function Content({ title, content, TitleComponent = SectionTitle }) {
     <Layout>
       {title && <TitleComponent title={title} />}
       <div className="overflow-hidden">
-        <div className="prose prose-lg mx-auto lg:max-w-none">
+        <div className="prose prose-lg mx-auto lg:max-w-none prose-headings:first:mt-0">
           <ProseableText value={content} classes="mx-auto" />
         </div>
       </div>

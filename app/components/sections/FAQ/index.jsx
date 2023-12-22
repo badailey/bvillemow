@@ -14,9 +14,9 @@ export function Faq({ title, questions_answers }) {
           <Disclosure as="div" key={question_answer._key} className="pt-6">
             {({ open }) => (
               <>
-                <dt className="text-lg md:text-xl">
+                <dt className="text-xl">
                   <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-500">
-                    <span className="font-medium text-gray-900">
+                    <span className="font-medium text-gray-900 text-2xl">
                       {question_answer.question}
                     </span>
                     <span className="ml-6 flex h-7 items-center">
@@ -33,7 +33,7 @@ export function Faq({ title, questions_answers }) {
                 <Disclosure.Panel as="dd" className="mt-2 pr-12">
                   <ProseableText
                     value={question_answer.answer}
-                    classes="max-w-none"
+                    classes="max-w-none text-xl"
                   />
                 </Disclosure.Panel>
               </>

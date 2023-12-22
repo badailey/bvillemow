@@ -76,7 +76,7 @@ export function TwoColumnContent({
     <Layout>
       {title && <SectionTitle title={title} />}
 
-      <div className="mx-auto grid max-w-2xl gap-x-8 gap-y-10 text-base leading-7 text-gray-300 lg:mx-0 lg:max-w-none lg:grid-cols-6">
+      <div className="mx-auto grid max-w-2xl gap-x-8 gap-y-10 text-xl leading-7 text-gray-300 lg:mx-0 lg:max-w-none lg:grid-cols-6">
         <LeftColumn>
           {columns[0]._type === "content" ? (
             <Content

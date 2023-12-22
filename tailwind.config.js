@@ -22,6 +22,11 @@ export default {
         brand: "#EF9B9B",
         "brand-dark": "#E86D6D",
         "brand-light": "#F6C5C5",
+        "brand-gray-lightest": "#E5E5E5",
+        "brand-gray-light": "#CCCCCC",
+        "brand-gray-medium": "#818181",
+        "brand-gray-dark": "#6B6B6B",
+        "brand-gray-darkest": "#333333"
       },
     },
   },

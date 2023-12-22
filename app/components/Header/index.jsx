@@ -14,7 +14,7 @@ export default function Header({ mainNavigation }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-brand-gray-dark text-white text-xl">
+    <header className="bg-brand-gray-darkest text-white text-xl">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -35,13 +35,13 @@ export default function Header({ mainNavigation }) {
               {section.target || section.path ? (
                 <a
                   href={pagePath(section)}
-                  className="text-xl font-semibold leading-6 text-white"
+                  className="flex items-center text-xl font-semibold leading-6 text-white p-2 hover:text-brand hover:bg-brand-gray-darkest focus:outline-none focus:ring focus:ring-brand rounded-md"
                 >
                   {section.target?.title || section.title}
                 </a>
               ) : (
                 <Popover className="relative">
-                  <Popover.Button className="flex items-center gap-x-1 text-xl font-semibold leading-6 text-white">
+                  <Popover.Button className="flex items-center gap-x-1 text-xl font-semibold leading-6 text-white hover:text-brand hover:bg-brand-gray-darkest focus:outline-none focus:ring focus:ring-brand rounded-md p-2">
                     {section.target?.title || section.title}
                     <ChevronDownIcon
                       className="h-5 w-5 flex-none text-gray-400"
@@ -58,12 +58,12 @@ export default function Header({ mainNavigation }) {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-[11rem] overflow-hidden rounded-3xl bg-brand-gray-darkest shadow-lg ring-1 ring-stone-900/5">
+                    <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-[11rem] overflow-hidden rounded-3xl bg-brand-gray-medium shadow-lg ring-1 ring-stone-900/5">
                       <div className="p-4">
                         {section.links.map((link, index) => (
                           <div
                             key={index}
-                            className="group relative flex gap-x-6 rounded-lg p-4 text-xl leading-6 hover:bg-stone-900"
+                            className="group relative flex gap-x-6 rounded-lg p-4 text-xl leading-6 hover:bg-brand-gray-dark hover:text-brand"
                           >
                             <div className="flex-auto">
                               <a

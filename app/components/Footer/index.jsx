@@ -17,7 +17,7 @@ const social = {
 export default function Footer({ footerNavigation, company }) {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-brand-gray-dark mt-8" aria-labelledby="footer-heading">
+    <footer className="bg-brand-gray-darkest mt-8" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -49,14 +49,14 @@ export default function Footer({ footerNavigation, company }) {
               {footerNavigation?.sections?.map((section, index) => (
                 <div key={section._key}>
                   {!section.target && (
-                    <h3 className="pb-2 text-xl font-bold leading-6 text-white">
+                    <h3 className="pb-2 text-xl font-bold leading-6 text-white hover:text-brand">
                       {section.title}
                     </h3>
                   )}
                   {section.target ? (
                     <a
                       href={pagePath(section)}
-                      className="text-xl font-bold leading-6 text-white"
+                      className="text-xl font-bold leading-6 text-white hover:text-brand"
                     >
                       {section.target.title}
                     </a>

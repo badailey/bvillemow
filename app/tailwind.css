@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  background-color: #fbfbf4;
+  background-color: #f2f2f2;
   background-image: repeating-linear-gradient(
       25deg,
       transparent 0,

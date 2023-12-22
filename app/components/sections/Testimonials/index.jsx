@@ -9,7 +9,7 @@ export function Testimonials({ title, testimonialList }) {
       <div className="py-12 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-xl text-center">
-            <h2 className="pb-6 text-3xl font-semibold leading-8 tracking-tight text-brand-dark">
+            <h2 className="pb-6 text-4xl font-semibold leading-8 tracking-tight text-brand-dark">
               Testimonials
             </h2>
             {title && <SectionTitle title={title} />}
@@ -21,11 +21,11 @@ export function Testimonials({ title, testimonialList }) {
                   key={testimonial.endorser._id}
                   className="pt-8 sm:inline-block sm:w-full sm:px-4"
                 >
-                  <figure className="rounded-2xl bg-stone-200 p-8 text-sm leading-6">
+                  <figure className="rounded-2xl bg-brand-gray-lightest p-8 text-xl leading-6">
                     <blockquote className="text-gray-900">
                       <ProseableText
                         value={testimonial.body}
-                        classes="max-w-none"
+                        classes="max-w-none text-xl"
                       />
                     </blockquote>
                     <figcaption className="mt-6 flex items-center gap-x-4">

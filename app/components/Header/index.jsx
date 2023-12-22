@@ -100,7 +100,7 @@ export default function Header({ mainNavigation }) {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon className="h-10 w-10" aria-hidden="true" />
           </button>
         </div>
       </nav>
@@ -111,7 +111,7 @@ export default function Header({ mainNavigation }) {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full bg-brand-gray-dark overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full bg-brand-gray-darkest overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Baldwinsville Meals on Wheels</span>
@@ -136,7 +136,7 @@ export default function Header({ mainNavigation }) {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                <XMarkIcon className="h-10 w-10" aria-hidden="true" />
               </button>
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function Header({ mainNavigation }) {
                     {section.target || section.path ? (
                       <a
                         href={pagePath(section)}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900"
+                        className="-mx-3 block rounded-lg px-3 py-2 text-xl font-semibold leading-7 text-white hover:bg-brand-gray-dark hover:text-brand"
                       >
                         {section.target?.title || section.title}
                       </a>
@@ -157,7 +157,7 @@ export default function Header({ mainNavigation }) {
                       <Disclosure as="div" className="-mx-3">
                         {({ open }) => (
                           <>
-                            <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-gray-900">
+                            <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-xl font-semibold leading-7 text-white hover:bg-brand-gray-dark hover:text-brand">
                               {section.target?.title || section.title}
                               <ChevronDownIcon
                                 className={classNames(
@@ -173,7 +173,7 @@ export default function Header({ mainNavigation }) {
                                   key={index}
                                   as="a"
                                   href={pagePath(link)}
-                                  className="block rounded-lg py-2 pl-6 pr-3 text-xl font-semibold leading-7 text-white hover:bg-gray-900"
+                                  className="block rounded-lg py-2 pl-6 pr-3 text-xl font-semibold leading-7 text-white hover:bg-brand-gray-dark hover:text-brand"
                                 >
                                   {link.target?.title ||
                                     link.title ||

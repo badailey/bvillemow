@@ -20,7 +20,7 @@ export async function getPage(slug) {
                 ...,
                 _type == "internalLink" => {
                   "targetObject": @.reference->
-                }
+                },
               }`;
   const query = `*[_type == "page" && slug.current == "${slug}"] | order(_createdAt asc)[0]{
     _id, internalTitle, title, slug, mainImage, metaDescription,
@@ -51,25 +51,6 @@ export async function getPage(slug) {
             ${blockContentFields}
           },
       },
-      // _type == "posterCarousel" => {
-      //   ...,
-      //   posterSeries->{
-      //     posters[]-> {
-      //       _id,
-      //       itemId,
-      //       poem,
-      //       image{
-      //         asset->
-      //       }
-      //     }
-      //   }
-      // },
-      _type == "content" => {
-        content[]{
-          ...,
-          ${blockContentFields}
-        },
-      },
       _type == "twoColumnContent" => {
         ...,
         columns[]{
@@ -81,7 +62,7 @@ export async function getPage(slug) {
                 ...,
                 asset->
               },
-            }
+            },
           },
           _type == "content" => {
             ...,

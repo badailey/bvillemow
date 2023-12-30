@@ -70,8 +70,8 @@ export default function Header({ mainNavigation }) {
                                 href={pagePath(link)}
                                 className="white block font-semibold"
                               >
-                                {link.target?.title ||
-                                  link.title ||
+                                {link.title ||
+                                  link.target?.title ||
                                   link.target?.internalTitle}
                               </a>
                             </div>
@@ -175,8 +175,8 @@ export default function Header({ mainNavigation }) {
                                   href={pagePath(link)}
                                   className="block rounded-lg py-2 pl-6 pr-3 text-xl font-semibold leading-7 text-white hover:bg-brand-gray-dark hover:text-brand"
                                 >
-                                  {link.target?.title ||
-                                    link.title ||
+                                  {link.title ||
+                                    link.target?.title ||
                                     link.target?.internalTitle}
                                 </Disclosure.Button>
                               ))}

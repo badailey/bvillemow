@@ -4,7 +4,15 @@ import ProseableText from "~/components/sanity/ProseableText";
 import { SanityImage } from "~/components/sanity/Image";
 import { pagePath } from "~/lib/utils";
 
-export function Hero({ image, title, description, cta }) {
+const OPACITIES = {
+  0: "opacity-0",
+  40: "opacity-40",
+  60: "opacity-60",
+  80: "opacity-80",
+};
+
+export function Hero({ darken, image, title, description, cta }) {
+  const opacity = OPACITIES[darken || "60"];
   return (
     <FullWidthLayout>
       <div className="relative bg-gray-500">
@@ -22,7 +30,7 @@ export function Hero({ image, title, description, cta }) {
             </div>
             <div
               aria-hidden="true"
-              className="absolute inset-0 bg-gray-700 opacity-60"
+              className={`absolute inset-0 bg-stone-800 ${opacity}`}
             />
           </>
         )}

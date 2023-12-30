@@ -106,6 +106,15 @@ export default defineType({
     {
       type: 'image',
       options: {hotspot: true},
+      fields: [
+        {
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
+          desctiption: 'optional',
+          hidden: ({parent}) => !parent?.asset,
+        },
+      ],
     },
   ],
 })

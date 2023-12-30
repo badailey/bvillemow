@@ -46,15 +46,10 @@ export default function ProseableText({ value = [], classes = "" }) {
   if (!valueGroups?.length) return null;
   return valueGroups.map(
     (group) => (
-      /*group[0]._type === "block" ? (
-      <div key={group[0]._key} className={`prose mx-auto py-4 ${classes}`}>
-        <PortableText value={group} />
-      </div>
-    ) : (*/
       <div
         key={group[0]._key}
         className={clsx([
-          `prose max-w-none px-2 prose-li:marker:text-brand-dark prose-img:inline prose-img:max-h-60 prose-img:rounded-xl prose-img:object-contain md:px-0 `,
+          `prose max-w-none px-2 prose-li:marker:text-brand-dark prose-img:max-h-60 prose-img:rounded-xl prose-img:object-contain md:px-0 `,
           classes,
         ])}
       >
@@ -63,7 +58,15 @@ export default function ProseableText({ value = [], classes = "" }) {
           value={group}
           components={{
             types: {
-              image: SanityImage,
+              image: ({ value }) => {
+                return (
+                  <SanityImage
+                    alt={value.alt}
+                    caption={value.caption}
+                    value={value}
+                  />
+                );
+              }
             },
             marks: {
               internalLink: ({ value, children }) => {

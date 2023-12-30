@@ -32,11 +32,14 @@ export const galleryImage = defineType({
       name: 'image',
       title: 'Image',
       type: 'image',
+      options: {hotspot: true},
+      validation: (Rule) => Rule.required().assetRequired(),
       fields: [
         {
           name: 'caption',
           type: 'string',
           title: 'Caption',
+          hidden: ({parent}) => !parent?.asset,
         },
       ],
     }),

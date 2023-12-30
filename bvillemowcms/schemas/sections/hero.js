@@ -25,8 +25,25 @@ export default {
       name: 'image',
       title: 'Image',
       type: 'image',
+      validation: (Rule) => Rule.required().assetRequired(),
       options: {
         hotspot: true,
+      },
+    },
+    {
+      name: 'darken',
+      title: 'Darken image amount',
+      type: 'string',
+      description:
+        'text is rendered in white text, darkened backgrounds help make the text legible',
+      initialValue: '60',
+      options: {
+        list: [
+          {title: 'Dark', value: '80'},
+          {title: 'Normal', value: '60'},
+          {title: 'Light', value: '40'},
+          {title: 'None', value: '0'},
+        ],
       },
     },
     {

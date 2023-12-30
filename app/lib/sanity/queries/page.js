@@ -11,18 +11,19 @@ export async function getPagePaths() {
 }
 
 export async function getPage(slug) {
-  const blockContentFields = `markDefs[]{
+  const blockContentFields = `
+                _type == "image" => {
+                  ...,
+                  asset->
+                },
+                markDefs[]{
                 ...,
                 _type == "internalLink" => {
                   "targetObject": @.reference->
                 }
               }`;
   const query = `*[_type == "page" && slug.current == "${slug}"] | order(_createdAt asc)[0]{
-    _id, internalTitle,title, slug, mainImage,metaDescription,
-    body[]{
-      ...,
-      asset->{..., "_key": _id}
-    },
+    _id, internalTitle, title, slug, mainImage, metaDescription,
     sections[]{
       ...,
       _type == "teamMembers" => {
@@ -50,18 +51,44 @@ export async function getPage(slug) {
             ${blockContentFields}
           },
       },
+      // _type == "posterCarousel" => {
+      //   ...,
+      //   posterSeries->{
+      //     posters[]-> {
+      //       _id,
+      //       itemId,
+      //       poem,
+      //       image{
+      //         asset->
+      //       }
+      //     }
+      //   }
+      // },
+      _type == "content" => {
+        content[]{
+          ...,
+          ${blockContentFields}
+        },
+      },
       _type == "twoColumnContent" => {
         ...,
         columns[]{
           _type == "inlineImage" => {
             ...,
             image{
-              asset->
+              ...,
+              _type == "image" => {
+                ...,
+                asset->
+              },
             }
           },
           _type == "content" => {
             ...,
-            ${blockContentFields}
+            content[]{
+              ...,
+              ${blockContentFields}
+            },
           },
         }
       },
@@ -69,7 +96,7 @@ export async function getPage(slug) {
         testimonialList[]{
           ...,
           endorser->{
-          ...,
+            ...,
             image{
             asset->
             },
